@@ -7,7 +7,7 @@
   font-family: "Fira Code", "Source Code Pro", monospace;
 }
 
-html,body{height:100%;margin:0}
+html{height:100%;margin:0}
 
 body{
   background:var(--bg);
@@ -17,7 +17,9 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:32px;
+  padding:20px;
+  margin:0;
+  min-height:100%;
 }
 
 /* Container split */
@@ -25,16 +27,15 @@ body{
   width:100%;
   max-width:1100px;
   height:70vh;
-  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   overflow:hidden;
   display:flex;
-  box-shadow:0 8px 30px rgba(2,6,23,0.6);
 }
 
 /* Left pane: image/illustration */
 .left{
   flex:1;
   min-width:320px;
+  min-height: 300px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -54,32 +55,13 @@ body{
   display:flex;
   flex-direction:column;
   justify-content:center;
-  gap:16px;
-  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  gap:15px;
 }
 
 h1{font-size:25px;margin:0 0 8px 0;color:var(--card);line-height:1.05;}
 p.lead{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
 .lead a{color:var(--accent);text-decoration:none}
 
-.meta{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  color:var(--muted);
-  font-size:14px;
-}
-
-.btn{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:10px;
-  background:transparent;
-  border:1px solid rgba(255,255,255,0.06);
-  color:var(--card);
-  text-decoration:none;
-  font-size:14px;
-}
 
 /* Responsive: stack on small screens */
 @media (max-width:820px){
